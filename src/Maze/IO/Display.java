@@ -49,15 +49,33 @@ public class Display {
         gen_delay.setValue(0);
 
         solvingStrategies().forEach(solvingAlg::addItem);
+        generatingStrategies().forEach(generatingAlg::addItem);
     }
 
-    public ArrayList<String> solvingStrategies() {
+    private ArrayList<String> solvingStrategies() {
         ArrayList<String> classes = new ArrayList<>();
         final ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
         try {
             for (ClassPath.ClassInfo info : ClassPath.from(loader).getTopLevelClasses()) {
                 if (info.getName().startsWith("Maze.Logic.Solving.Strategies.")) {
+                    final Class<?> clazz = info.load();
+                    classes.add(clazz.getSimpleName());
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return classes;
+    }
+
+    private ArrayList<String> generatingStrategies() {
+        ArrayList<String> classes = new ArrayList<>();
+        final ClassLoader loader = Thread.currentThread().getContextClassLoader();
+
+        try {
+            for (ClassPath.ClassInfo info : ClassPath.from(loader).getTopLevelClasses()) {
+                if (info.getName().startsWith("Maze.Logic.Generation.Strategies.")) {
                     final Class<?> clazz = info.load();
                     classes.add(clazz.getSimpleName());
                 }
