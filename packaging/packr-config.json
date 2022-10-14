@@ -1,0 +1,17 @@
+{
+  "platform": "linux64",
+  "jdk": "/home/hidden-machine/.jdks/openjdk-18.0.2",
+  "executable": "MazeApp",
+  "classpath": [
+    "out/artifacts/MazesProject_jar/MazesProject.jar"
+  ],
+  "removelibs": [
+    "out/artifacts/MazesProject_jar/MazesProject.jar"
+  ],
+  "mainclass": "Maze.Main",
+  "vmargs": [
+    "Xmx1G"
+  ],
+  "minimizejre": "soft",
+  "output": "out/final_package/MazeApp_linux"
+}
