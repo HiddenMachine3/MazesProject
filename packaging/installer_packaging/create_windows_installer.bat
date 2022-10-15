@@ -1,12 +1,13 @@
 @echo off
-set appver=%date:~6,2%.%date:~3,2%.%date:~0,2%%time:~0,4%
+set appver=%date:~7,4%.%date:~3,2%.%date:~0,2%.%time:~0,5%
 set appver=%appver::=%
+set appver=%appver: =0%
 echo %appver%
 
 rem goto endcomment
 jpackage --input lib/ ^
-		 --main-jar ZoomAutomator.jar ^
-		 -n ZoomAutomator ^
+		 --main-jar MiddleMan.jar ^
+		 -n MazesProject ^
 		 --runtime-image myruntime ^
 		 --win-dir-chooser ^
 		 --win-menu ^
