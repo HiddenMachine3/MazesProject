@@ -9,11 +9,11 @@ jpackage --input lib/ ^
 		 --main-jar MiddleMan.jar ^
 		 -n MazesProject ^
 		 --runtime-image myruntime ^
+		 --icon lib/Resources/Icon.ico ^
+         --app-version %appver% ^
 		 --win-dir-chooser ^
 		 --win-menu ^
 		 --win-shortcut ^
-		 --icon lib/Resources/Icon.ico ^
-		 --app-version %appver% ^
 		 -d output
 :endcomment
 rem you have to use a different app version every time so that it automatically uninstalls the old version, or else you have to manually uninstall the old version

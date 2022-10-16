@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MiddleMan:jar">
+    <output-path>$PROJECT_DIR$/packaging/installer_packaging/lib</output-path>
+    <root id="archive" name="MiddleMan.jar">
+      <element id="module-output" name="MiddleMan" />
+    </root>
+  </artifact>
+</component>

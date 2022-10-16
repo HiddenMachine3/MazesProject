@@ -1,7 +1,15 @@
-appver=$(date +%Y.%m.%d):$(date +"%T")
-appver=${appver//[:]/.}
+
+#making output dir if not exists
+if [ ! -d "output" ]; then
+    mkdir output
+fi
+
+#deciding appversion based on date and time
+appver=$(date +%yy.%m.%d).$(date +"%T")
+appver=${appver//[:]/}
 echo $appver
 
+#making installer
 jpackage --input lib/ \
 		 --main-jar MiddleMan.jar \
 		 -n MazesProjectApp \
