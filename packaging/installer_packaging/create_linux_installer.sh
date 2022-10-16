@@ -5,7 +5,7 @@ if [ ! -d "output" ]; then
 fi
 
 #deciding appversion based on date and time
-appver=$(date +%yy.%m.%d).$(date +"%T")
+appver=$(date +%Y.%m.%d).$(date +"%T")
 appver=${appver//[:]/}
 echo $appver
 
