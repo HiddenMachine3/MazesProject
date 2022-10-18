@@ -9,3 +9,5 @@ code = MazesProject.jar
 
 # The main entry point for the application
 class = Maze.Main
+
+allow_offline = true
