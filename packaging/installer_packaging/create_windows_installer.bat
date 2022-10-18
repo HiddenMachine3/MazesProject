@@ -6,7 +6,7 @@ echo %appver%
 
 rem goto endcomment
 jpackage --input lib/ ^
-		 --main-jar MiddleMan.jar ^
+		 --main-jar getdown.jar ^
 		 -n MazesProject ^
 		 --runtime-image myruntime ^
 		 --icon lib/Resources/Icon.ico ^
@@ -14,6 +14,7 @@ jpackage --input lib/ ^
 		 --win-dir-chooser ^
 		 --win-menu ^
 		 --win-shortcut ^
+		 --win-per-user-install ^
 		 -d output
 :endcomment
 rem you have to use a different app version every time so that it automatically uninstalls the old version, or else you have to manually uninstall the old version
