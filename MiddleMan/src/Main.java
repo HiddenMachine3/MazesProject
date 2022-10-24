@@ -1,5 +1,4 @@
-import org.apache.commons.io.FileUtils;
-
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -7,6 +6,7 @@ import java.lang.reflect.Method;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Arrays;
 
 public class Main {
     /**
@@ -38,6 +38,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        new Main().start();
+        String string = Arrays.toString(args);
+
+        JFrame frame = new JFrame(string);
+
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        //new Main().start();
     }
 }

@@ -1,4 +1,5 @@
-serverLoc="C:\Users\megha\folderOnServer"
-#serverLoc="/home/hidden-machine/Documents/folderOnServer"
+
+serverLoc="/home/hidden-machine/Documents/folderOnServer"
+#serverLoc="C:\Users\megha\folderOnServer"
 cd "$serverLoc"
-python -m http.server 8000
+python3 -m http.server 8000
