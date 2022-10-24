@@ -3,9 +3,7 @@ package Maze;
 import javax.swing.*;
 
 //todo: get a server to deploy application files and database
-//todo: launch application after installation
-//todo: figure out way to use custom UI for jpackage msi installer ==> "You need an internet connection to
-// download the application related files"
+
 public class Main {
     public static void main(String[] args) {
 
