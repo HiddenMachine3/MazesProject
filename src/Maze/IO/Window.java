@@ -19,6 +19,7 @@ public class Window extends JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
 
+
         this.MazeGraphic = MazeGraphic;
         display = new Display(MazeGraphic, a1, a2, a3, a4, c1, c2, c3, c4);
         setContentPane(display.MainPanel);

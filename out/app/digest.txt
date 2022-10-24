@@ -1,3 +1,3 @@
-getdown.txt = c411d17888e5fd346c44ef224136b11a
-MazesProject.jar = 7c6b5a2b40cff15503c621e726849b9b
-digest.txt = b153f3b101a47caf92c26eed87106638
+getdown.txt = ff427679d55d1fefc92215c76cb88135
+MazesProject.jar = c614cf3ab16541743a32ebc0575a0024
+digest.txt = fea490094832b26c3577171a893dc437

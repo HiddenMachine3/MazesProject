@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MazesProject.iml" filepath="$PROJECT_DIR$/MazesProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MiddleMan/MiddleMan.iml" filepath="$PROJECT_DIR$/MiddleMan/MiddleMan.iml" />
     </modules>
   </component>
 </project>

@@ -15,6 +15,7 @@ jpackage --input lib/ ^
 		 --win-menu ^
 		 --win-shortcut ^
 		 --win-per-user-install ^
+		 --arguments '$APPDIR' ^
 		 -d output
 :endcomment
 rem you have to use a different app version every time so that it automatically uninstalls the old version, or else you have to manually uninstall the old version
