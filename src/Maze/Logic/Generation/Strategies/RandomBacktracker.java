@@ -17,7 +17,7 @@ public class RandomBacktracker extends GeneratingStrategy {
             }
         Stack<Cell> history = new Stack<>();
         Cell currentCell;
-        Stack<Point> possibleDirs = new Stack<>();
+        ArrayList<Point> possibleDirs = new ArrayList<>();
         Point dir = new Point(0, 0),
                 n = new Point(0, -1),
                 s = new Point(0, 1),
@@ -43,19 +43,21 @@ public class RandomBacktracker extends GeneratingStrategy {
 
             {//finding possible directions
                 if (x != 0 && !Grid[x - 1][y].visited)
-                    possibleDirs.push(w);
+                    possibleDirs.add(w);
                 if (y != 0 && !Grid[x][y - 1].visited)
-                    possibleDirs.push(n);
+                    possibleDirs.add(n);
                 if (x != (width - 1) && !Grid[x + 1][y].visited)
-                    possibleDirs.push(e);
+                    possibleDirs.add(e);
                 if (y != (height - 1) && !Grid[x][y + 1].visited)
-                    possibleDirs.push(s);
+                    possibleDirs.add(s);
             }
 
-            if (possibleDirs.size() != 0) {
+            Collections.shuffle(possibleDirs);
+
+            if (!possibleDirs.isEmpty()) {
                 history.push(currentCell);
                 //choosing nextCell
-                dir.setLocation(possibleDirs.get((int) (random.nextDouble() * possibleDirs.size())));
+                dir.setLocation(possibleDirs.remove(possibleDirs.size() -1));
                 Cell nextCell = Grid[x + dir.x][y + dir.y];
 
                 {//breaking walls
@@ -70,7 +72,7 @@ public class RandomBacktracker extends GeneratingStrategy {
                 history.push(nextCell);
             }
 
-            possibleDirs.removeAllElements();
+            possibleDirs.clear();
             updateImage();
         }
         System.out.println("Finished Generating");

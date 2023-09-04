@@ -24,7 +24,7 @@ public class MazeManager {
     GeneratingThread generatingThread;
 
     String solvingAlgorithm = "Tremaux";
-    String generatingAlgorithm = "RandomBacktracker";
+    String generatingAlgorithm = "RecursiveBacktracker"; //"RandomBacktracker";
 
     //todo:add other algorithm strategeis
 

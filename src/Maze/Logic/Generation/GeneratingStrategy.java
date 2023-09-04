@@ -48,7 +48,7 @@ public abstract class GeneratingStrategy {
     public PaintingStrategy getPaintingStrategy() {
         return new PaintingStrategy() {
             public final int filled = Color.yellow.getRGB();
-            public final int unfilled = Color.black.getRGB();
+            public final int unfilled = Color.darkGray.getRGB(); //black.getRGB();
 
             final Line2D line = new Line2D.Double(0, 0, 0, 0);
             final BasicStroke stroke = new BasicStroke(5);
